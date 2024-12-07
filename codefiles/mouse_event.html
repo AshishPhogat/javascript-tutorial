@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseEvent</title>
+</head>
+<body onmousemove="addCoordinate(event)" style="height:100vh; width:100vw">
+    <div id="mouseEventBox">
+        hello this is mouse box.
+
+    </div>
+
+    <script>
+        const addCoordinate = (e)=>{
+            let x = e.clientX;
+            let y = e.clientY;
+            const element = document.getElementById("mouseEventBox");
+            element.insertAdjacentHTML("beforeend",`<div> X:${x} , Y:${y} </div>`);
+        }
+    </script>
+</body>
+</html>
